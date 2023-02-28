@@ -1,6 +1,7 @@
 import { ContactItem, ResumeData } from "./Resume.interfaces";
-import "./Resume.module.scss";
+import "./Resume.scss";
 import ResumeSection from "./ResumeSection";
+import SkillSection from "./SkillSection";
 
 function ContactEntry(props: { item: ContactItem })
 {
@@ -20,17 +21,13 @@ export default function Resume(props: { data?: ResumeData })
 		return <></>;
 
 	return (
-		<div className="resume-container">
-			<div className="resume">
-				<div className="resume-content">
-					<div className="resume-name">{data.name}</div>					
-					<div className="resume-contact">
-						{ data.contactItems.map((item, index) => <ContactEntry key={index} item={item} />) }
-					</div>
-					<ResumeSection title="Skills - Professionally Proficient or Higher" skills={data.skills} />
-					{ data.sections.map(section => <ResumeSection title={section.label} items={section.items} />) }
-				</div>
-			</div>
-		</div>
+		<article className="resume">
+			<header className="name">{data.name}</header>
+			<section className="contact">
+				{ data.contactItems.map((item, index) => <ContactEntry key={index} item={item} />) }
+			</section>
+			<SkillSection skills={data.skills} />
+			{ data.sections.map(section => <ResumeSection title={section.label} items={section.items} />) }
+		</article>
 	);
 }

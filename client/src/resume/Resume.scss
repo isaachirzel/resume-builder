@@ -1,0 +1,55 @@
+:root {
+	--page-width: 8.5in;
+	--page-height: 11in;
+	--page-margin: 0.5in;
+	--font-size-1: 14pt;
+	--font-size-2: 12pt;
+	--font-size-3: 10pt;
+	--font-size-4: 10pt;
+}
+
+.resume {
+	width: var(--page-width);
+	height: var(--page-height);
+	padding: var(--page-margin);
+	background-color: white;
+	overflow: hidden;
+
+	.link {
+		color: blue;
+	}
+
+	.name {
+		font-size: var(--font-size-1);
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.contact {
+		font-size: var(--font-size-2);
+		margin: 0.25em 0;
+		display: flex;
+		justify-content: center;
+		
+		> * {
+			color: blue;
+			margin: 0 1em;
+		}
+	}
+}
+
+@media screen {
+
+	.resume {
+		box-shadow:
+			0  5px 10px rgba(58, 58, 58, 0.05),
+			0 15px 40px rgba(0, 0, 0, 0.2);
+	}
+
+}
+
+@media print {
+	.about, .home, .app > header {
+		display: none;
+	}
+}

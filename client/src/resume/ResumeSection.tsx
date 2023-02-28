@@ -1,7 +1,8 @@
 import { ResumeItem } from "./Resume.interfaces";
 import ResumeEntry from "./ResumeEntry";
+import "./ResumeSection.scss";
 
-export default function ResumeSection(props: { title: string, items?: ResumeItem[], skills?: string[] })
+export default function ResumeSection(props: { title: string, items?: ResumeItem[] })
 {
 	return (
 		<div className="resume-section">
@@ -10,7 +11,6 @@ export default function ResumeSection(props: { title: string, items?: ResumeItem
 				<hr />
 			</div>
 			<section>
-				{ props.skills?.join(", ") }
 				{ props.items?.map((item, index) => <ResumeEntry key={index} info={item} />) }
 			</section>
 		</div>
