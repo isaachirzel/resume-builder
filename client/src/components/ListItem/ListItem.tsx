@@ -1,4 +1,4 @@
-import ResumeUtils from "./Resume.utils";
+import ResumeUtils from "../../utils/ResumeUtils";
 
 export default function ListItem(props: { source: string })
 {

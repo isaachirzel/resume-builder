@@ -1,4 +1,4 @@
-import UrlUtils, { QueryParameters } from "./Url.utils";
+import UrlUtils, { QueryParameters } from "./UrlUtils";
 
 export type Method = "GET" | "POST" | "PUT" | "DELETE"
 

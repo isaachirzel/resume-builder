@@ -1,8 +1,8 @@
-import ListItem from "./ListItem";
-import { ResumeItem } from "./Resume.interfaces";
-import ResumeUtils from "./Resume.utils";
+import ListItem from "../components/ListItem/ListItem";
+import Entry from "../models/Entry";
+import ResumeUtils from "../utils/ResumeUtils";
 
-export default function ResumeEntry(props: { info: ResumeItem })
+export default function ResumeEntry(props: { info: Entry })
 {
 	const info = props.info;
 	const label = info.organization || info.url;

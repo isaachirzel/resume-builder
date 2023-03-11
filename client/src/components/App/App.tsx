@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Resume from "../resume/Resume";
-import { ResumeData } from "../resume/Resume.interfaces";
-import { ResumeService } from "../resume/Resume.service";
+import { ResumeService } from "../../services/ResumeService";
 import "./App.scss";
+import Resume from "../Resume/Resume";
+import ResumeData from "../../models/Resume";
 
 export default function App()
 {
@@ -19,7 +19,7 @@ export default function App()
 			</header>
 			<main>
 				<div className="resume-container">
-					<Resume data={resumeData} />
+					<Resume resume={resumeData} />
 				</div>
 			</main>
 			<footer>

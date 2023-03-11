@@ -1,5 +1,6 @@
-import Api from "../common/Api";
-import { ResumeData } from "./Resume.interfaces";
+import Api from "../utils/ApiUtils";
+import ResumeSectionData from "../models/ResumeSection";
+import ResumeData from "../models/Resume";
 
 export class ResumeService
 {
